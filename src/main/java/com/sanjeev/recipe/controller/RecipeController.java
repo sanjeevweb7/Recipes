@@ -12,7 +12,6 @@ import org.springframework.security.web.authentication.logout.SecurityContextLog
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,12 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.Timestamp;
 import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Controller
 public class RecipeController {
@@ -36,6 +30,12 @@ public class RecipeController {
     @Autowired
     private RecipeOperationService recipeOperationService;
 
+
+    /*This is RecipeController class which handles all the requests.
+    /loadHomePage : This method handles "/" requests
+    /@param : Model
+    /Method : GET
+    */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String loadHomePage(Model model) {
         model.addAttribute("name", getLoggedInUserName());
@@ -43,6 +43,10 @@ public class RecipeController {
         return "home";
     }
 
+    /*getAllRecipe : This loads all the list of recipe requests
+    /@param : Model
+    /Method : GET
+     */
     @RequestMapping("/manageRecipe")
     public String getAllRecipe(Model model){
         List<Recipe> recipesList = recipeOperationService.listAll();
@@ -51,14 +55,10 @@ public class RecipeController {
         return "displayRecipe";
     }
 
-    @RequestMapping("/recipe/{id}")
-    public String getRecipe(@PathVariable Integer id,Model model){
-        Recipe listRecipes = recipeOperationService.get(id);
-        model.addAttribute("listRecipes", listRecipes);
-        logger.debug("listRecipes::"+listRecipes);
-        return "displayRecipe";
-    }
-
+    /*addRecipe : This method loads the add recipe page
+    /@param : Model
+    /Method : Get
+     */
     @RequestMapping(value = "/addRecipe", method = RequestMethod.GET)
     public String addRecipe(Model model) {
         model.addAttribute("recipe", new Recipe());
@@ -66,6 +66,10 @@ public class RecipeController {
         return "addRecipe";
     }
 
+    /*addRecipe : This method insert recipe to DB
+    /@param : Recipe,BindingResult
+    /Method : POST
+     */
     @RequestMapping(value = "/addRecipe", method = RequestMethod.POST)
     public String addRecipe(Recipe recipe, BindingResult result) {
 
@@ -83,6 +87,10 @@ public class RecipeController {
         return "redirect:/manageRecipe";
     }
 
+    /*updateRecipe : This method loads the modify recipe page
+    /@param : Model,Id
+    /Method : GET
+     */
     @RequestMapping(value = "/updateRecipe", method = RequestMethod.GET)
     public String updateRecipe(@RequestParam int id, Model model) {
         Recipe recipe = recipeOperationService.get(id);
@@ -90,6 +98,10 @@ public class RecipeController {
         return "addRecipe";
     }
 
+    /*updateRecipe : This method is to update the recipe into DB.
+    /@param : Recipe,BindingResult
+    /Method : POST
+     */
     @RequestMapping(value = "/updateRecipe", method = RequestMethod.POST)
     public String updateRecipe(Recipe recipe, BindingResult result) {
 
@@ -105,6 +117,10 @@ public class RecipeController {
         return "redirect:/manageRecipe";
     }
 
+    /*deleteRecipe : This deletes the recipe from DB
+    /@param : id
+   //Method : GET
+     */
     @RequestMapping(value = "/deleteRecipe", method = RequestMethod.GET)
     public String deleteRecipe(@RequestParam int id) {
         recipeOperationService.delete(id);
@@ -113,6 +129,8 @@ public class RecipeController {
         return "redirect:/manageRecipe";
     }
 
+     /*getLoggedInUserName : This method is to fetch logged in user
+     */
     public String getLoggedInUserName() {
         Object userLogged = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         logger.debug("userLogged::"+userLogged);
