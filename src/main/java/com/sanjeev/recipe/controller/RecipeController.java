@@ -2,6 +2,8 @@ package com.sanjeev.recipe.controller;
 
 import com.sanjeev.recipe.model.Recipe;
 import com.sanjeev.recipe.service.RecipeOperationService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,10 +21,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class RecipeController {
+
+    private static final Logger logger = LoggerFactory.getLogger(RecipeController.class);
 
     @Autowired
     private RecipeOperationService recipeOperationService;
@@ -30,6 +39,7 @@ public class RecipeController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String loadHomePage(Model model) {
         model.addAttribute("name", getLoggedInUserName());
+        logger.debug("model::"+model);
         return "home";
     }
 
@@ -37,6 +47,7 @@ public class RecipeController {
     public String getAllRecipe(Model model){
         List<Recipe> recipesList = recipeOperationService.listAll();
         model.addAttribute("recipesList", recipesList);
+        logger.debug("recipesList::"+recipesList);
         return "displayRecipe";
     }
 
@@ -44,12 +55,14 @@ public class RecipeController {
     public String getRecipe(@PathVariable Integer id,Model model){
         Recipe listRecipes = recipeOperationService.get(id);
         model.addAttribute("listRecipes", listRecipes);
+        logger.debug("listRecipes::"+listRecipes);
         return "displayRecipe";
     }
 
     @RequestMapping(value = "/addRecipe", method = RequestMethod.GET)
     public String addRecipe(Model model) {
         model.addAttribute("recipe", new Recipe());
+        logger.debug("model::"+model);
         return "addRecipe";
     }
 
@@ -61,7 +74,12 @@ public class RecipeController {
         }
         recipe.setCreationDate(Timestamp.from(Instant.now()));
         recipe.setUpdatedBy(getLoggedInUserName());
+
+        logger.debug("recipe::"+recipe);
+        logger.debug("updated by::"+recipe.getUpdatedBy());
+
         recipeOperationService.save(recipe);
+
         return "redirect:/manageRecipe";
     }
 
@@ -80,6 +98,9 @@ public class RecipeController {
         }
         recipe.setCreationDate(Timestamp.from(Instant.now()));
         recipe.setUpdatedBy(getLoggedInUserName());
+        logger.debug("recipe::"+recipe);
+        logger.debug("updated by::"+recipe.getUpdatedBy());
+        logger.debug("updation time by::"+recipe.getCreationDate());
         recipeOperationService.save(recipe);
         return "redirect:/manageRecipe";
     }
@@ -87,11 +108,14 @@ public class RecipeController {
     @RequestMapping(value = "/deleteRecipe", method = RequestMethod.GET)
     public String deleteRecipe(@RequestParam int id) {
         recipeOperationService.delete(id);
+        logger.debug("recipe delete::"+id);
+
         return "redirect:/manageRecipe";
     }
 
     public String getLoggedInUserName() {
         Object userLogged = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        logger.debug("userLogged::"+userLogged);
 
         if (userLogged instanceof UserDetails) {
             return ((UserDetails) userLogged).getUsername();
@@ -110,6 +134,8 @@ public class RecipeController {
             new SecurityContextLogoutHandler().logout(request, response,
                     authentication);
         }
+        logger.debug("User logout:::"+authentication.getPrincipal());
+
         return "redirect:/user";
     }
 }

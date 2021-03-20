@@ -1,0 +1,186 @@
+2021-03-20 21:03:06,047 INFO com.sanjeev.recipe.RecipeApplication [main] Starting RecipeApplication using Java 1.8.0_251 on DESKTOP-H1GIGNQ with PID 16900 (D:\Projects\Recipes\target\classes started by Sanjeev in D:\Projects\Recipes)
+2021-03-20 21:03:06,051 DEBUG com.sanjeev.recipe.RecipeApplication [main] Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-20 21:03:06,052 INFO com.sanjeev.recipe.RecipeApplication [main] No active profile set, falling back to default profiles: default
+2021-03-20 21:03:07,712 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2021-03-20 21:03:07,712 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-20 21:03:08,210 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-03-20 21:03:08,215 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2021-03-20 21:03:08,375 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-20 21:03:08,426 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-20 21:03:08,537 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-20 21:03:08,722 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-03-20 21:03:08,722 WARN com.zaxxer.hikari.util.DriverDataSource [main] Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-20 21:03:09,327 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-03-20 21:03:09,346 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-20 21:03:09,979 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-20 21:03:11,014 INFO com.sanjeev.recipe.RecipeApplication [main] Started RecipeApplication in 5.631 seconds (JVM running for 6.69)
+2021-03-20 21:03:25,630 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-20 21:03:42,972 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-8] userLogged::com.sanjeev.recipe.model.MyUserDetails@45f2de9b
+2021-03-20 21:03:42,975 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-8] model::{name=sanjeev}
+2021-03-20 21:03:47,566 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-9] recipesList::[com.sanjeev.recipe.model.Recipe@2ea03789, com.sanjeev.recipe.model.Recipe@f21d9b, com.sanjeev.recipe.model.Recipe@777839e, com.sanjeev.recipe.model.Recipe@87e277c]
+2021-03-20 21:04:32,562 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-2] model::{recipe=com.sanjeev.recipe.model.Recipe@4b8a111a}
+2021-03-20 21:04:47,019 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-7] userLogged::com.sanjeev.recipe.model.MyUserDetails@45f2de9b
+2021-03-20 21:04:47,027 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-7] recipe::com.sanjeev.recipe.model.Recipe@7caab6e0
+2021-03-20 21:04:47,027 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-7] updated by::sanjeev
+2021-03-20 21:04:47,177 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-6] recipesList::[com.sanjeev.recipe.model.Recipe@74186b7f, com.sanjeev.recipe.model.Recipe@1779e084, com.sanjeev.recipe.model.Recipe@262c3e1a, com.sanjeev.recipe.model.Recipe@76b0e0ab, com.sanjeev.recipe.model.Recipe@41c42e91]
+2021-03-20 21:04:57,455 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-4] userLogged::com.sanjeev.recipe.model.MyUserDetails@45f2de9b
+2021-03-20 21:04:57,456 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-4] recipe::com.sanjeev.recipe.model.Recipe@515bd0f8
+2021-03-20 21:04:57,456 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-4] updated by::sanjeev
+2021-03-20 21:04:57,456 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-4] updation time by::2021-03-20 21:04:57.455
+2021-03-20 21:04:57,533 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-7] recipesList::[com.sanjeev.recipe.model.Recipe@6fd1f69f, com.sanjeev.recipe.model.Recipe@67ff6be7, com.sanjeev.recipe.model.Recipe@28a26a7e, com.sanjeev.recipe.model.Recipe@5c9105e0, com.sanjeev.recipe.model.Recipe@40adedc6]
+2021-03-20 21:05:00,628 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-9] recipe delete::16
+2021-03-20 21:05:00,657 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-1] recipesList::[com.sanjeev.recipe.model.Recipe@507c07a1, com.sanjeev.recipe.model.Recipe@617b4e82, com.sanjeev.recipe.model.Recipe@67cea4c6, com.sanjeev.recipe.model.Recipe@6b207add]
+2021-03-20 21:05:38,915 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-4] recipesList::[com.sanjeev.recipe.model.Recipe@19610e17, com.sanjeev.recipe.model.Recipe@275552a6, com.sanjeev.recipe.model.Recipe@31400682, com.sanjeev.recipe.model.Recipe@6704cd3d]
+2021-03-20 21:56:27,150 INFO com.sanjeev.recipe.RecipeApplication [main] Starting RecipeApplication using Java 1.8.0_251 on DESKTOP-H1GIGNQ with PID 8728 (D:\Projects\Recipes\target\classes started by Sanjeev in D:\Projects\Recipes)
+2021-03-20 21:56:27,154 DEBUG com.sanjeev.recipe.RecipeApplication [main] Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-20 21:56:27,154 INFO com.sanjeev.recipe.RecipeApplication [main] No active profile set, falling back to default profiles: default
+2021-03-20 21:56:29,124 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2021-03-20 21:56:29,124 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-20 21:56:29,537 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-03-20 21:56:29,544 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2021-03-20 21:56:29,737 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-20 21:56:29,776 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-20 21:56:29,870 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-20 21:56:30,039 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-03-20 21:56:30,039 WARN com.zaxxer.hikari.util.DriverDataSource [main] Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-20 21:56:30,619 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-03-20 21:56:30,624 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-20 21:56:31,153 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-20 21:56:32,024 INFO com.sanjeev.recipe.RecipeApplication [main] Started RecipeApplication in 5.469 seconds (JVM running for 6.324)
+2021-03-20 21:56:48,158 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-20 21:56:54,530 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-5] userLogged::com.sanjeev.recipe.model.MyUserDetails@2046ce94
+2021-03-20 21:56:54,530 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-5] model::{name=sanjeev}
+2021-03-20 21:56:57,630 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8080-exec-9] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Timestamp format must be yyyy-mm-dd hh:mm:ss[.fffffffff]] with root cause
+java.lang.IllegalArgumentException: Timestamp format must be yyyy-mm-dd hh:mm:ss[.fffffffff]
+	at java.sql.Timestamp.valueOf(Timestamp.java:237)
+	at com.sanjeev.recipe.controller.RecipeController.changeDateFormate(RecipeController.java:149)
+	at com.sanjeev.recipe.controller.RecipeController.getAllRecipe(RecipeController.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-20 22:01:16,725 INFO com.sanjeev.recipe.RecipeApplication [main] Starting RecipeApplication using Java 1.8.0_251 on DESKTOP-H1GIGNQ with PID 18604 (D:\Projects\Recipes\target\classes started by Sanjeev in D:\Projects\Recipes)
+2021-03-20 22:01:16,728 DEBUG com.sanjeev.recipe.RecipeApplication [main] Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-03-20 22:01:16,729 INFO com.sanjeev.recipe.RecipeApplication [main] No active profile set, falling back to default profiles: default
+2021-03-20 22:01:18,582 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2021-03-20 22:01:18,582 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-20 22:01:18,969 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-03-20 22:01:18,975 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2021-03-20 22:01:19,174 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-20 22:01:19,214 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-20 22:01:19,314 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-20 22:01:19,480 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-03-20 22:01:19,480 WARN com.zaxxer.hikari.util.DriverDataSource [main] Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-03-20 22:01:20,054 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-03-20 22:01:20,056 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-20 22:01:20,616 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-20 22:01:21,551 INFO com.sanjeev.recipe.RecipeApplication [main] Started RecipeApplication in 5.523 seconds (JVM running for 6.705)
+2021-03-20 22:01:30,793 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-20 22:01:39,613 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-5] userLogged::com.sanjeev.recipe.model.MyUserDetails@323885d5
+2021-03-20 22:01:39,613 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-5] model::{name=sanjeev}
+2021-03-20 22:01:42,763 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-9] recipesList::[com.sanjeev.recipe.model.Recipe@1b4b47cd, com.sanjeev.recipe.model.Recipe@28931481, com.sanjeev.recipe.model.Recipe@2232548c, com.sanjeev.recipe.model.Recipe@69f3954e]
+2021-03-20 22:01:45,393 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-4] model::{recipe=com.sanjeev.recipe.model.Recipe@20aa75d2}
+2021-03-20 22:02:00,120 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-7] userLogged::com.sanjeev.recipe.model.MyUserDetails@323885d5
+2021-03-20 22:02:00,120 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-7] recipe::com.sanjeev.recipe.model.Recipe@299d4e8e
+2021-03-20 22:02:00,121 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-7] updated by::sanjeev
+2021-03-20 22:02:00,249 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-3] recipesList::[com.sanjeev.recipe.model.Recipe@665e7253, com.sanjeev.recipe.model.Recipe@648dba83, com.sanjeev.recipe.model.Recipe@156b2f19, com.sanjeev.recipe.model.Recipe@427d9f64, com.sanjeev.recipe.model.Recipe@5724a192]
+2021-03-20 22:02:07,937 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-5] userLogged::com.sanjeev.recipe.model.MyUserDetails@323885d5
+2021-03-20 22:02:07,938 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-5] recipe::com.sanjeev.recipe.model.Recipe@450a7d7d
+2021-03-20 22:02:07,938 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-5] updated by::sanjeev
+2021-03-20 22:02:07,939 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-5] updation time by::2021-03-20 22:02:07.936
+2021-03-20 22:02:08,013 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-7] recipesList::[com.sanjeev.recipe.model.Recipe@33951215, com.sanjeev.recipe.model.Recipe@221c45aa, com.sanjeev.recipe.model.Recipe@4d89f6ad, com.sanjeev.recipe.model.Recipe@2de8761f, com.sanjeev.recipe.model.Recipe@6d19471d]
+2021-03-20 22:02:10,673 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-9] recipe delete::17
+2021-03-20 22:02:10,702 DEBUG com.sanjeev.recipe.controller.RecipeController [http-nio-8080-exec-1] recipesList::[com.sanjeev.recipe.model.Recipe@5e851d6e, com.sanjeev.recipe.model.Recipe@5ed60683, com.sanjeev.recipe.model.Recipe@44521b82, com.sanjeev.recipe.model.Recipe@2c3235b3]
