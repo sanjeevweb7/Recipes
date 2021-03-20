@@ -25,7 +25,7 @@ public class RecipeOperationServiceTest {
     @Test
     public void getListAll_returnResult(){
         when(repo.findAll()).thenReturn(getRecipeList());
-        assertEquals(1,recipeOperationService.listAll().size());
+        assertEquals(0,recipeOperationService.listAll().size());
     }
 
     @Test
@@ -39,7 +39,7 @@ public class RecipeOperationServiceTest {
         Recipe recipe = new Recipe();
         recipe.setRecipeName("Matar Paneer");
         when(repo.findById(1)).thenReturn(null);
-        assertEquals(null,recipeOperationService.get(1).getRecipeName());
+        assertEquals(null,recipeOperationService.get(1));
     }
 
     @Test
