@@ -38,7 +38,6 @@ public class RecipeOperationServiceTest {
     public void testGet_returnResult(){
         Recipe recipe = new Recipe();
         recipe.setRecipeName("Matar Paneer");
-        //when(repo.findById(1).get()).thenReturn(recipe);
         when(repo.findById(1)).thenReturn(null);
         assertEquals(null,recipeOperationService.get(1).getRecipeName());
     }
