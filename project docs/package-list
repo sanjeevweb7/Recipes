@@ -1,0 +1,6 @@
+com.sanjeev.recipe
+com.sanjeev.recipe.controller
+com.sanjeev.recipe.model
+com.sanjeev.recipe.repository
+com.sanjeev.recipe.security
+com.sanjeev.recipe.service
