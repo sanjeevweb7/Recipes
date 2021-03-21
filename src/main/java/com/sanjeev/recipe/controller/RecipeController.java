@@ -20,7 +20,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class RecipeController {
@@ -29,7 +32,6 @@ public class RecipeController {
 
     @Autowired
     private RecipeOperationService recipeOperationService;
-
 
     /*This is RecipeController class which handles all the requests.
     /loadHomePage : This method handles "/" requests
@@ -50,7 +52,7 @@ public class RecipeController {
     @RequestMapping("/manageRecipe")
     public String getAllRecipe(Model model){
         List<Recipe> recipesList = recipeOperationService.listAll();
-        model.addAttribute("recipesList", recipesList);
+        model.addAttribute("recipesList", changeDateFormat(recipesList));
         logger.debug("recipesList::"+recipesList);
         return "displayRecipe";
     }
@@ -76,7 +78,7 @@ public class RecipeController {
         if (result.hasErrors()) {
             return "addRecipe";
         }
-        recipe.setCreationDate(Timestamp.from(Instant.now()));
+        recipe.setCreationDate(Timestamp.from(Instant.now()).toString());
         recipe.setUpdatedBy(getLoggedInUserName());
 
         logger.debug("recipe::"+recipe);
@@ -108,7 +110,7 @@ public class RecipeController {
         if (result.hasErrors()) {
             return "addRecipe";
         }
-        recipe.setCreationDate(Timestamp.from(Instant.now()));
+        recipe.setCreationDate(Timestamp.from(Instant.now()).toString());
         recipe.setUpdatedBy(getLoggedInUserName());
         logger.debug("recipe::"+recipe);
         logger.debug("updated by::"+recipe.getUpdatedBy());
@@ -155,5 +157,21 @@ public class RecipeController {
         logger.debug("User logout:::"+authentication.getPrincipal());
 
         return "redirect:/user";
+    }
+
+    public List<Recipe> changeDateFormat(List<Recipe> recipeList) {
+
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+        DateTimeFormatter newDateFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+
+        for (Recipe recipe : recipeList) {
+            LocalDateTime localDate = LocalDateTime.parse(recipe.getCreationDate(), dateFormatter);
+            recipe.setCreationDate(newDateFormatter.format(localDate));
+            if(recipe.getVegIndicator().equalsIgnoreCase("0"))
+                recipe.setVegIndicator("Veg");
+            else
+                recipe.setVegIndicator("Non-Veg");
+        }
+        return recipeList;
     }
 }

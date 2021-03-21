@@ -1,7 +1,6 @@
 package com.sanjeev.recipe.model;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 
 
 @Entity
@@ -12,11 +11,11 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String recipeName;
-    private int vegIndicator;
+    private String vegIndicator;
     private String personIndicator;
     private String cookingInstruction;
     private String ingredients;
-    private Timestamp creationDate;
+    private String creationDate;
     private String updatedBy;
 
     public int getId() {
@@ -35,11 +34,11 @@ public class Recipe {
         this.recipeName = recipeName;
     }
 
-    public int getVegIndicator() {
+    public String getVegIndicator() {
         return vegIndicator;
     }
 
-    public void setVegIndicator(int vegIndicator) {
+    public void setVegIndicator(String vegIndicator) {
         this.vegIndicator = vegIndicator;
     }
 
@@ -67,11 +66,11 @@ public class Recipe {
         this.ingredients = ingredients;
     }
 
-    public Timestamp getCreationDate() {
+    public String getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Timestamp creationDate) {
+    public void setCreationDate(String creationDate) {
         this.creationDate = creationDate;
     }
 

@@ -16,13 +16,13 @@
                         </fieldset>
                         <fieldset class="form-group">
                             <form:label path="vegIndicator">Veg Indicator</form:label>
-                            <form:input path="vegIndicator" type="text" class="form-control"
+                            <form:input path="vegIndicator" type="number" class="form-control"
                                         required="required" />
                             <form:errors path="vegIndicator" cssClass="text-warning" />
                         </fieldset>
                         <fieldset class="form-group">
                             <form:label path="personIndicator">No. of Person can eat</form:label>
-                            <form:input path="personIndicator" type="text" class="form-control"
+                            <form:input path="personIndicator" type="number" class="form-control"
                                         required="required" />
                             <form:errors path="personIndicator" cssClass="text-warning" />
                         </fieldset>
