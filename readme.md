@@ -31,3 +31,5 @@ Ready to deploy and install
 #Repository
 https://github.com/sanjeevweb7/Recipes.git
  
+#Database SQL script
+recipe_db.sql
